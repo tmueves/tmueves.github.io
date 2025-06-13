@@ -1,0 +1,168 @@
+/* style.css for T-Muev.es */
+
+:root {
+    /* Color palette from logo and design */
+    --primary-bg: #f4faf7;
+    --accent-bg: #e6f2fa;
+    --primary-green: #1e7e34;
+    --primary-blue: #0074b7;
+    --white: #fff;
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
+    --shadow-side: 2px 0 12px 0 rgba(31, 38, 135, 0.07);
+    /* Spacing */
+    --pane-padding: 1.5rem;
+    --card-radius: 18px;
+    --card-padding: 2.5rem 2rem 2rem 2rem;
+    --card-max-width: 400px;
+    --logo-radius: 4px;
+    --logo-min-width: 220px;
+    --logo-min-height: 480px;
+    --logo-img-min-height: 360px;
+    --logo-img-max-width: 70%;
+    --logo-img-max-height: 60vh;
+    --nav-link-radius: 8px;
+    --nav-link-padding: 0.7em 1.2em;
+    --header-font-size: 2rem;
+    --header-margin-bottom: 1.2rem;
+    --nav-li-margin: 1rem 0;
+    --transition: background 0.2s, color 0.2s;
+}
+
+/* ========== Layout ========== */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--primary-bg);
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#logo-pane {
+    width: 33.33vw;
+    min-width: var(--logo-min-width);
+    min-height: var(--logo-min-height);
+    background: var(--accent-bg);
+    border-radius: var(--card-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-side);
+    padding: 0 var(--pane-padding);
+}
+
+#logo-pane img {
+    max-width: var(--logo-img-max-width);
+    max-height: var(--logo-img-max-height);
+    min-height: var(--logo-img-min-height);
+    border-radius: var(--logo-radius);
+    object-fit: contain;
+}
+
+#content-pane {
+    width: 66.67vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--pane-padding);
+}
+
+.card {
+    background: var(--white);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
+    padding: var(--card-padding);
+    max-width: var(--card-max-width);
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--primary-green);
+    margin-bottom: var(--header-margin-bottom);
+    font-size: var(--header-font-size);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: var(--nav-li-margin);
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-blue);
+    background: var(--accent-bg);
+    padding: var(--nav-link-padding);
+    border-radius: var(--nav-link-radius);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--primary-blue);
+    color: var(--white);
+    outline: none;
+}
+
+/* ========== MVP Fullscreen Iframe ========== */
+html.fullscreen, body.fullscreen {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100vw;
+    overflow: hidden;
+    display: block;
+    background: var(--white);
+}
+body.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+iframe.fullscreen {
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: block;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+    #logo-pane, #content-pane {
+        width: 100vw;
+        min-width: 0;
+        padding: 0 0.5rem;
+    }
+    #logo-pane {
+        min-height: 120px;
+        box-shadow: none;
+        padding-top: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+    #content-pane {
+        min-height: 0;
+        padding-top: 1.5rem;
+    }
+    #logo-pane img {
+        max-width: 40vw;
+        max-height: 80px;
+        min-height: 180px;
+        border-radius: var(--logo-radius);
+    }
+}

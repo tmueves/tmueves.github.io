@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -7,122 +8,14 @@
     <meta name="description" content="T-Mueves es una plataforma de movilidad urbana que te ayuda a encontrar la mejor ruta para moverte por la ciudad.">
     <meta name="keywords" content="movilidad, transporte, rutas, ciudad, T-Muev.es">
     <meta name="author" content="T-Muev.es Team">
-
-    <style>
-        /* Split layout: left for logo, right for card */
-        body {
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f4faf7; /* Soft background color */
-            display: flex;
-            flex-direction: row;
-            height: 100vh;
-        }
-
-        .left-top-pane {
-            width: 33.33vw;
-            min-width: 220px;
-            min-height: 480px;
-            background: #e6f2fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 2px 0 12px 0 rgba(31, 38, 135, 0.07);
-            padding: auto 1rem;
-        }
-
-        .left-top-pane img {
-            max-width: 70%;
-            max-height: 60vh;
-            min-height: 360px;
-            object-fit: contain;
-        }
-
-        .right-bottom-pane {
-            width: 66.67vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: auto 1rem;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
-            padding: 2.5rem 2rem 2rem 2rem;
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-        }
-
-        header h1 {
-            color: #1e7e34;
-            margin-bottom: 1.2rem;
-            font-size: 2rem;
-            letter-spacing: 1px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav li {
-            margin: 1rem 0;
-        }
-
-        nav a {
-            display: inline-block;
-            text-decoration: none;
-            color: #0074b7;
-            background: #e6f2fa;
-            padding: 0.7em 1.2em;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        nav a:hover {
-            background: #0074b7;
-            color: #fff;
-        }
-
-        @media (max-width: 700px) {
-            body {
-                flex-direction: column;
-            }
-            .left-top-pane, .right-bottom-pane {
-                width: 100vw;
-                min-width: 0;
-            }
-            .left-top-pane {
-                min-height: 120px;
-                box-shadow: none;
-                padding-top: 2.5rem;
-                padding-bottom: 1.5rem;
-            }
-            .right-bottom-pane {
-                min-height: 0;
-                padding-top: 1.5rem;
-            }
-            .left-top-pane img {
-                max-width: 40vw;
-                max-height: 80px;
-                min-height: 280px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="left-top-pane">
+    <div id="logo-pane">
         <img src="./logo.png" alt="T-Muev.es logo">
     </div>
-    <div class="right-bottom-pane">
+    <div id="content-pane">
         <div class="card">
             <header>
                 <h1>Bienvenido a T-Muev.es</h1>
@@ -137,4 +30,5 @@
         </div>
     </div>
 </body>
+
 </html>
